@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>TORSEN - obudowy sterownicze, obróbka blach | Moderówka, Jedlicze</title>
+<meta name="description" content="Producent obudów sterowniczych serii OS (IP66, IK10) i uchwytów grzejnika T-UGA. Cięcie laserem, gięcie blach, spawanie TIG/MIG, malowanie proszkowe. Moderówka 113a, Jedlicze.">
+<link rel="icon" href="img/favicon.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-laser-m.webp" media="(max-width:760px)">
+<link rel="preload" as="image" href="img/hero-laser.webp" media="(min-width:761px)">
+<style>
+:root{--or:#F68712;--or-d:#D9700A;--ink:#0B0D10;--tx:#2B3037;--mut:#5B636D;--bl:#005181;--bl-d:#003F65;--sz:#EEF1F4;--ln:#D6DCE2;--w:#fff;--hh:72px;--cut:12px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh)}
+body{margin:0;background:#fff;color:var(--tx);font:400 17px/1.6 Archivo,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{color:var(--ink);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin:0}
+h2{font-size:clamp(30px,3.3vw,48px)}
+h3{font-size:21px;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:min(1320px,100% - 48px);margin:0 auto}
+section{padding:clamp(64px,8vw,120px) 0}
+.szary{background:var(--sz)}
+
+/* narożniki z logo: L ze ściętymi końcami */
+.n-tr,.n-bl{position:absolute;width:var(--n,56px);height:var(--n,56px);background:var(--or);pointer-events:none;--t:var(--nt,7px)}
+.n-tr{top:0;right:0;clip-path:polygon(0 0,100% 0,100% 100%,calc(100% - var(--t)) calc(100% - var(--t)),calc(100% - var(--t)) var(--t),var(--t) var(--t))}
+.n-bl{bottom:0;left:0;clip-path:polygon(0 0,var(--t) var(--t),var(--t) calc(100% - var(--t)),calc(100% - var(--t)) calc(100% - var(--t)),100% 100%,0 100%)}
+
+/* przyciski: ścięte rogi jak końce L w logo */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;font:700 17px/1 Archivo,sans-serif;text-decoration:none;border:0;cursor:pointer;clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)));transition:background .2s,color .2s}
+.btn-or{background:var(--or);color:var(--ink)}
+.btn-or:hover{background:#FF9A2E}
+.btn-w{background:#fff;color:var(--ink)}
+.btn-w:hover{background:var(--sz)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#262B33}
+.btn:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+
+/* nagłówek */
+.top{position:sticky;top:0;z-index:50;height:var(--hh);background:#fff;border-bottom:1px solid var(--ln)}
+.top .wrap{height:100%;display:flex;align-items:center;gap:28px}
+.logo{display:block;color:var(--ink);flex:none}
+.logo svg{height:28px;width:auto;display:block}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{position:relative;padding:10px 12px;font-weight:600;font-size:16px;text-decoration:none;color:var(--tx)}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink)}
+.nav a.on::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:3px;background:var(--or)}
+.top .tel{font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap;font-size:16px;padding:12px 18px;background:var(--sz);clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,9px 100%,0 calc(100% - 9px))}
+.top .tel:hover{background:#E1E6EB}
+.burger{display:none;margin-left:auto;background:none;border:0;padding:10px 4px;font:700 16px Archivo,sans-serif;color:var(--ink);cursor:pointer;align-items:center;gap:10px}
+.burger i{display:block;width:24px;height:2px;background:currentColor;position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:24px;height:2px;background:currentColor}
+.burger i::before{top:-7px}.burger i::after{top:7px;width:16px}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - var(--hh));display:flex;align-items:center;color:#fff;overflow:hidden;isolation:isolate;background:#14171b}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 40%;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,11,13,.05) 0%,rgba(9,11,13,.35) 38%,rgba(9,11,13,.82) 62%,rgba(9,11,13,.9) 100%)}
+.hero .wrap{display:flex;justify-content:flex-end;padding:56px 0}
+.ramka{position:relative;max-width:820px;padding:46px 48px 44px;--n:78px;--nt:8px}
+.hero h1{color:#fff;font-size:clamp(36px,3.7vw,64px);margin-bottom:22px}
+.hero .lead{font-size:clamp(17px,1.25vw,20px);line-height:1.55;color:#E7EAEE;max-width:34em;margin-bottom:32px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero .adres{margin:26px 0 0;font-size:15px;color:#C9CED4;display:flex;flex-wrap:wrap;gap:4px 22px}
+
+/* seria OS */
+.os{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.foto-rama{position:relative;padding:18px;--n:64px;--nt:7px}
+.foto-rama{display:flex;justify-content:center}.foto-rama img{width:auto;max-width:100%;max-height:640px;height:auto}
+.os h2{margin-bottom:20px}
+.os .opis{font-size:18px;color:var(--tx);max-width:36em}
+.spec{margin:30px 0 34px;border-top:2px solid var(--ink)}
+.spec div{display:grid;grid-template-columns:minmax(150px,.9fr) 1.3fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--ln);font-size:16px}
+.spec dt{color:var(--mut)}
+.spec dd{margin:0;color:var(--ink);font-weight:600}
+
+/* karty przesuwane */
+.glowa{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
+.glowa p{max-width:40em;margin:16px 0 0;font-size:18px}
+.strz{display:flex;gap:10px;flex:none}
+.strz button{width:52px;height:52px;border:0;cursor:pointer;background:#fff;color:var(--ink);font:700 22px/1 Archivo,sans-serif;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,9px 100%,0 calc(100% - 9px))}
+.strz button:hover{background:var(--or)}
+.tor{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 2*24px)/3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;padding-bottom:4px}
+.tor::-webkit-scrollbar{display:none}
+.tor.drag{cursor:grabbing;scroll-snap-type:none}
+.tor>*{scroll-snap-align:start}
+.tor img{-webkit-user-drag:none;user-select:none}
+.karta{background:#fff;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.karta .im{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:26px;border-bottom:1px solid var(--ln)}
+.karta .im img{max-height:100%;width:auto;object-fit:contain}
+.karta .tx{padding:26px 28px 30px}
+.karta h3{margin-bottom:12px}
+.karta ul{margin:0;padding:0;list-style:none}
+.karta li,.lista li{position:relative;padding-left:22px;margin:0 0 8px;font-size:16px;line-height:1.5}
+.karta li::before,.lista li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;background:var(--or);clip-path:polygon(0 0,100% 0,100% 100%,65% 65%,65% 35%,35% 35%,35% 65%,0 100%,0 0)}
+.lista{margin:0;padding:0;list-style:none}
+.zestaw{margin-top:56px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:40px;padding-top:40px;border-top:1px solid var(--ln)}
+.zestaw h3{font-size:26px}
+.zestaw .lista{columns:2;column-gap:40px}
+.zestaw .lista li{break-inside:avoid}
+
+/* usługi - ciemna sekcja */
+.uslugi{background:var(--bl);color:#E3EDF5}
+.uslugi h2,.uslugi h3{color:#fff}
+.uslugi .glowa p{color:#D4E2EE}
+.us{position:relative}
+.us .fot{position:relative;aspect-ratio:4/3;overflow:hidden;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.us .fot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.us:hover .fot img{transform:scale(1.04)}
+.us h3{margin:22px 0 8px;display:flex;align-items:center;gap:12px}
+.us h3::before{content:"";flex:none;width:14px;height:14px;background:var(--or);clip-path:polygon(0 0,100% 0,100% 100%,70% 70%,70% 30%,30% 30%)}
+.us p{font-size:16px;color:#CFDDEA;margin:0}
+.uslugi .tor{grid-auto-columns:calc((100% - 3*24px)/4)}
+
+/* T-UGA */
+.tuga{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.tuga h2{margin-bottom:18px}
+.tuga .opis{font-size:18px}
+.tuga .kol{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:30px 0}
+.tuga h3{font-size:18px;margin-bottom:14px}
+.wersje{display:flex;border-top:2px solid var(--ink);border-bottom:1px solid var(--ln);margin:0 0 32px}
+.wersje span{flex:1;padding:14px 0;text-align:center;font-weight:700;color:var(--ink);font-size:18px;border-left:1px solid var(--ln)}
+.wersje span:first-child{border-left:0}
+.wersje small{display:block;font-weight:500;color:var(--mut);font-size:13px}
+.tuga-foto{position:relative;background:var(--sz);padding:48px;display:flex;justify-content:center;align-items:flex-end;gap:clamp(20px,4vw,64px);--n:64px;--nt:7px}
+.tuga-foto img{height:clamp(300px,34vw,520px);width:auto}.tuga-foto img+img{height:clamp(220px,24vw,370px)}
+
+/* firma */
+.firma{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.firma h2{margin-bottom:22px}
+.firma .opis{font-size:18px}
+.archiwum{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:16px}
+.archiwum figure{margin:0;overflow:hidden;background:#1a1612}
+.archiwum img{width:100%;height:100%;object-fit:cover}
+.archiwum .a1{grid-column:1/3;aspect-ratio:16/8}
+.archiwum .a2{aspect-ratio:4/3}
+.archiwum .a3{aspect-ratio:4/3}
+.archiwum figcaption{font-size:14px;color:var(--mut);margin-top:10px}
+.podpis-arch{font-size:14px;color:var(--mut);margin-top:12px}
+
+/* sieć sprzedaży */
+.siec{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,96px)}
+.siec h2{margin-bottom:20px}
+.siec .opis{font-size:18px;margin-bottom:28px}
+.dyst{border-top:2px solid var(--ink)}
+.dyst article{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:28px 0;border-bottom:1px solid var(--ln)}
+.dyst .zn{position:relative;width:36px;height:36px;--n:36px;--nt:6px;margin-top:4px}
+.dyst h3{font-size:24px;margin-bottom:6px}
+.dyst p{margin:0;color:var(--mut)}
+.dyst a{color:var(--bl);font-weight:600;text-decoration:none}
+.dyst a:hover{text-decoration:underline}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
+.kontakt h2{margin-bottom:14px}
+.kontakt .opis{font-size:18px;margin-bottom:28px}
+form{background:#fff;padding:clamp(24px,3vw,40px);clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,26px 100%,0 calc(100% - 26px))}
+.pola{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:15px;font-weight:600;color:var(--ink)}
+input,textarea{display:block;width:100%;margin-top:6px;padding:13px 14px;font:400 16px Archivo,sans-serif;color:var(--ink);background:#fff;border:1px solid #BFC7CF;border-radius:0}
+input:focus,textarea:focus{outline:2px solid var(--or);outline-offset:0;border-color:var(--or)}
+textarea{min-height:130px;resize:vertical}
+.pelna{grid-column:1/-1}
+.zgoda{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:14px;line-height:1.45;color:var(--mut);margin:18px 0 22px}
+.zgoda input{width:20px;height:20px;margin:1px 0 0;flex:none;accent-color:var(--or)}
+.info-form{display:none;margin:16px 0 0;font-size:15px;color:var(--bl);font-weight:600}
+.dane{font-size:17px}
+.dane h3{font-size:22px;margin-bottom:12px}
+.dane p{margin:0 0 6px}
+.dane .duzy{font-size:clamp(22px,2vw,28px);font-weight:800;color:var(--ink);text-decoration:none;display:inline-block;margin:2px 0}
+.dane .duzy:hover{color:var(--bl)}
+.dane .rej{color:var(--mut);font-size:15px;margin-top:14px}
+.mapa{position:relative;margin-top:28px;aspect-ratio:16/10;background:#dde3e8}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* stopka */
+footer{background:var(--ink);color:#B7BEC6;padding:56px 0 28px;font-size:15px}
+.st{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer .logo{color:#fff;margin-bottom:18px}
+footer .logo svg{height:26px}
+footer h4{color:#fff;font-size:16px;margin:0 0 12px}
+footer p{margin:0 0 6px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin:0 0 6px}
+.st-dol{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 28px;margin-top:40px;padding-top:22px;border-top:1px solid #262B33;font-size:14px}
+.st-dol button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0}
+.st-dol button:hover{color:#fff}
+
+/* cookies */
+.cookies{position:fixed;left:24px;bottom:24px;z-index:80;max-width:440px;background:#fff;color:var(--tx);padding:22px 24px;box-shadow:0 10px 40px rgba(11,13,16,.22);font-size:15px;line-height:1.5;display:none}
+.cookies.pokaz{display:block}
+.cookies p{margin:0 0 14px}
+.cookies a{color:var(--bl);font-weight:600}
+.cookies .cta{gap:10px}
+.cookies .btn{min-height:44px;padding:0 18px;font-size:15px}
+.cookies .btn-jasny{background:var(--sz);color:var(--ink)}
+
+/* menu mobilne */
+.mmenu{position:fixed;inset:var(--hh) 0 0 0;z-index:49;background:#fff;padding:20px 24px 32px;display:none;flex-direction:column;overflow-y:auto}
+.mmenu.otw{display:flex}
+.mmenu a{padding:14px 0;border-bottom:1px solid var(--ln);font-size:21px;font-weight:700;color:var(--ink);text-decoration:none}
+.mmenu .btn{margin-top:24px;border:0}
+
+@media (min-width:761px) and (max-height:800px){.hero .wrap{padding:32px 0}.ramka{padding:34px 40px 32px}.hero h1{font-size:clamp(34px,3.4vw,52px);margin-bottom:16px}.hero .lead{margin-bottom:24px}.hero .adres{margin-top:18px}}
+@media (max-width:1180px){
+  .nav a{padding:10px 8px;font-size:15px}
+  .uslugi .tor{grid-auto-columns:calc((100% - 2*24px)/3)}
+}
+@media (max-width:1020px){
+  .nav,.top .tel{display:none}
+  .burger{display:inline-flex}
+  .os,.tuga,.firma,.siec,.kontakt{grid-template-columns:1fr}
+  .tor{grid-auto-columns:calc((100% - 24px)/2)}
+  .uslugi .tor{grid-auto-columns:calc((100% - 24px)/2)}
+  .zestaw{grid-template-columns:1fr;gap:20px}
+  .st{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--hh:62px;--cut:10px}
+  body{font-size:16px}
+  .wrap{width:calc(100% - 32px)}
+  .logo svg{height:24px}
+  .hero{align-items:flex-end}
+  .hero picture img{object-position:40% 0}
+  .hero::before{background:linear-gradient(180deg,rgba(9,11,13,0) 0%,rgba(9,11,13,.15) 22%,rgba(9,11,13,.78) 50%,rgba(9,11,13,.92) 100%)}
+  .hero .wrap{padding:28px 0 24px}
+  .ramka{padding:26px 22px 24px;--n:46px;--nt:6px}
+  .hero h1{font-size:clamp(30px,8.6vw,38px);margin-bottom:16px}
+  .hero .lead{font-size:16px;margin-bottom:24px}
+  .cta .btn{flex:1 1 100%}
+  .hero .adres{margin-top:18px;font-size:14px}
+  .glowa{display:block;margin-bottom:28px}
+  .glowa p,.os .opis,.tuga .opis,.firma .opis,.siec .opis,.kontakt .opis{font-size:17px}
+  .strz{display:none}
+  .tor,.uslugi .tor{grid-auto-columns:84%;gap:16px}
+  .spec div{grid-template-columns:1fr;gap:2px;font-size:16px}
+  .zestaw .lista{columns:1}
+  .tuga .kol{grid-template-columns:1fr;gap:20px}
+  .tuga-foto{padding:30px 20px}
+  .tuga-foto img{height:280px}.tuga-foto img+img{height:200px}
+  .wersje span{font-size:16px}
+  .archiwum{gap:10px}
+  .pola{grid-template-columns:1fr}
+  .cookies{left:10px;right:10px;bottom:10px;max-width:none;padding:12px 14px;font-size:13px;line-height:1.4}
+  .cookies p{margin-bottom:10px}
+  .cookies .cta .btn{flex:1 1 0;min-height:40px;padding:0 10px;font-size:14px}
+  footer{padding-top:44px}
+  .st{gap:28px 20px}
+  .st>div:first-child,.st>div:last-child{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#start" aria-label="TORSEN, strona główna"><svg viewBox="0 0 175.35 27.72" role="img" aria-hidden="true"><g transform="matrix(1.3333 0 0 -1.3333 0 27.72)"><g fill="currentColor"><path d="m36.007 14.373v-12.127h-5.234v12.127h-5.3535v4.1692h15.917v-4.1692h-5.3293"/><path d="m47.59 11.152v-1.516c0-2.2262 1.1368-3.7652 3.4344-3.7652 2.2981 0 3.4598 1.5391 3.4598 3.7652v1.516c0 2.2262-1.1617 3.7661-3.4598 3.7661-2.2976 0-3.4344-1.5399-3.4344-3.7661zm12.246-0.7578c0-5.5672-3.2457-8.4304-8.8121-8.4304-5.5656 0-8.7871 2.8633-8.7871 8.4304 0 5.566 3.2215 8.4321 8.7871 8.4321 5.5664 0 8.8121-2.8661 8.8121-8.4321"/><path d="m71.319 14.824h-3.4304v-3.0086h3.4304c0.8079 0 1.4707 0.6395 1.4707 1.5164 0 0.8766-0.6628 1.4922-1.4707 1.4922zm3.6504-5.7562 3.6235-6.8219h-5.8742l-2.8907 5.9465h-1.9394v-5.9465h-5.2344v16.297h9.9695c3.6242 0 5.4946-2.3449 5.4946-4.9977 0-1.8949-1.0422-3.6953-3.1489-4.4769"/><path d="m95.126 13.805v-0.284h-4.9028v0.0949c0 0.8532-0.5933 1.6578-2.1089 1.6578-1.4446 0-2.1555-0.4964-2.1555-1.0648 0-2.4398 9.4973-0.5215 9.6172-6.5609 0-4.052-3.0782-5.6836-7.177-5.6836-4.5699 0-8.0535 1.1582-8.0535 5.8016h4.9512c0-1.7527 1.0183-2.0594 2.6277-2.0594 0.9484 0 2.2988 0.07031 2.2988 1.0879 0 2.3445-9.6171 0.47344-9.6171 6.8215 0 3.7907 3.4582 5.211 7.3183 5.211 3.9328 0 7.1313-1.5399 7.2016-5.0219"/><path d="m98.181 18.543h14.092v-3.9082h-8.858v-2.2504h7.58v-3.743h-7.58v-2.4867h9.023v-3.9082h-14.257v16.297"/><path d="m126.94 2.2461-6.847 7.9117v-7.9117h-4.806v16.297h4.57l6.844-8.0289v8.0289h4.81v-16.297h-4.571"/></g><path d="m20.354 20.79h-19.467l5.3707-5.3711h8.7266v-8.7258l5.3699-5.3711v19.468" fill="#F68712"/><path d="m0 0h19.466l-5.3703 5.3703h-8.725v8.725l-5.3711 5.3711v-19.466" fill="#F68712"/></g></svg></a>
+    <nav class="nav" aria-label="Menu główne">
+      <a href="#obudowy">Obudowy OS</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#t-uga">Uchwyty T-UGA</a>
+      <a href="#firma">Firma</a>
+      <a href="#siec">Sieć sprzedaży</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+48665144480">+48 665 144 480</a>
+    <button class="burger" aria-expanded="false" aria-controls="mmenu">Menu <i></i></button>
+  </div>
+</header>
+<div class="mmenu" id="mmenu">
+  <a href="#obudowy">Obudowy OS</a>
+  <a href="#uslugi">Usługi</a>
+  <a href="#t-uga">Uchwyty T-UGA</a>
+  <a href="#firma">Firma</a>
+  <a href="#siec">Sieć sprzedaży</a>
+  <a href="#kontakt">Kontakt</a>
+  <a class="btn btn-or" href="tel:+48665144480">Zadzwoń: +48 665 144 480</a>
+</div>
+
+<main>
+<section class="hero" id="start" style="padding:0">
+  <picture>
+    <source media="(max-width:760px)" srcset="img/hero-laser-m.webp">
+    <img src="img/hero-laser.webp" alt="Cięcie blachy laserem" width="1920" height="1279" fetchpriority="high">
+  </picture>
+  <div class="wrap">
+    <div class="ramka">
+      <span class="n-tr"></span><span class="n-bl"></span>
+      <h1>Obudowy sterownicze projektowane i&nbsp;produkowane w&nbsp;Polsce</h1>
+      <p class="lead">Seria OS ze stali 1,2-2,0 mm, szczelność IP66, lakier proszkowy RAL 7035 albo w kolorze, który Państwo wskażą. Otwory i modyfikacje wykonujemy według wymagań klienta.</p>
+      <div class="cta">
+        <a class="btn btn-or" href="#kontakt">Zapytaj o obudowę</a>
+        <a class="btn btn-w" href="#obudowy">Zobacz serię OS</a>
+      </div>
+      <p class="adres"><span>Moderówka 113a, 38-460 Jedlicze</span> <span>tel. +48 13 431 24 13</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="obudowy">
+  <div class="wrap os">
+    <div class="foto-rama">
+      <span class="n-tr"></span><span class="n-bl"></span>
+      <img src="img/os-otwarta.webp" alt="Otwarta obudowa sterownicza TORSEN serii OS z płytą montażową" width="680" height="695" loading="lazy">
+    </div>
+    <div>
+      <h2>Seria OS: obudowy naścienne IP66</h2>
+      <p class="opis">Korpus z jednego arkusza blachy, spawany automatycznie w narożach, drzwi z uszczelką wylewaną i płyta montażowa z blachy ocynkowanej. Sprawdzają się w automatyce i przemyśle, a obudowę można zamontować w dowolnym położeniu.</p>
+      <dl class="spec">
+        <div><dt>Stopień szczelności</dt><dd>IP66</dd></div>
+        <div><dt>Odporność na uderzenia</dt><dd>IK10</dd></div>
+        <div><dt>Napięcie maksymalne</dt><dd>1000 V AC</dd></div>
+        <div><dt>Temperatura pracy</dt><dd>od -25°C do +40°C</dd></div>
+        <div><dt>Materiał</dt><dd>blacha stalowa 1,2-2,0 mm</dd></div>
+        <div><dt>Wykończenie</dt><dd>lakier proszkowy RAL 7035 lub inny kolor</dd></div>
+        <div><dt>Zgodność</dt><dd>dyrektywa LVD 2014/35/EU, PN-EN 62208, RoHS</dd></div>
+      </dl>
+      <a class="btn btn-ink" href="http://torsen.pl/files/OS.pdf" rel="noopener">Katalog obudów OS (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section class="szary" id="budowa">
+  <div class="wrap">
+    <div class="glowa">
+      <div>
+        <h2>Każdy element obudowy z bliska</h2>
+        <p>Standardowe wykonanie ma wszystko, czego potrzeba do montażu. Gdy projekt wymaga więcej, dorabiamy otwory, otwory wentylacyjne albo płytę montażową według rysunku.</p>
+      </div>
+      <div class="strz" data-tor="tor-budowa"><button aria-label="Poprzednie">&larr;</button><button aria-label="Następne">&rarr;</button></div>
+    </div>
+    <div class="tor" id="tor-budowa">
+      <article class="karta">
+        <div class="im"><img src="img/os-korpus.webp" alt="Korpus obudowy OS" width="800" height="870" loading="lazy"></div>
+        <div class="tx"><h3>Korpus</h3><ul>
+          <li>Jeden arkusz blachy 1,2-1,5 mm, spawany automatycznie w narożach</li>
+          <li>Otwory fi 9 w tylnej ścianie do montażu naściennego</li>
+          <li>Miedziowane śruby M6 do przewodu uziemiającego</li>
+          <li>Pokrywa otworu dostępowego 1,2 mm z uszczelką wylewaną</li>
+        </ul></div>
+      </article>
+      <article class="karta">
+        <div class="im"><img src="img/os-drzwi.webp" alt="Drzwi obudowy OS z uszczelką" width="800" height="853" loading="lazy"></div>
+        <div class="tx"><h3>Drzwi</h3><ul>
+          <li>Pełne drzwi 1,2-2,0 mm, duży kąt otwarcia</li>
+          <li>Zawias łatwo zdejmowany, montaż na lewą lub prawą stronę</li>
+          <li>Szyny montażowe spawane z profili usztywniają drzwi</li>
+          <li>Uszczelka wylewana chroni przed pyłem i wilgocią</li>
+        </ul></div>
+      </article>
+      <article class="karta">
+        <div class="im"><img src="img/os-seria.webp" alt="Obudowy OS w kilku rozmiarach" width="518" height="540" loading="lazy"></div>
+        <div class="tx"><h3>Płyta i wykonanie na zamówienie</h3><ul>
+          <li>Płyta montażowa z blachy cynkowanej 2 mm, pełna</li>
+          <li>Płyty, otwory i modyfikacje według wymagań klienta</li>
+          <li>Kolor lakieru do uzgodnienia</li>
+        </ul></div>
+      </article>
+    </div>
+    <div class="zestaw">
+      <h3>W zestawie standardowym</h3>
+      <ul class="lista">
+        <li>Obudowa z płytą montażową na gumowych odbojnikach, przykręconą nakrętkami M8</li>
+        <li>Pokrywa otworu dostępowego</li>
+        <li>Drzwi z zamkiem i klucz</li>
+        <li>Śruby montażowe</li>
+        <li>Wodoszczelne zaślepki otworów montażu naściennego</li>
+        <li>Nakrętki i podkładki do kabla uziemiającego</li>
+        <li>Naklejki i instrukcja uziemienia</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="uslugi" id="uslugi">
+  <div class="wrap">
+    <div class="glowa">
+      <div>
+        <h2>Obróbka blach na zlecenie</h2>
+        <p>Specjalizujemy się w obróbce blach. Tniemy laserem, gniemy, spawamy i malujemy elementy według projektów kooperantów.</p>
+      </div>
+      <div class="strz" data-tor="tor-uslugi"><button aria-label="Poprzednie">&larr;</button><button aria-label="Następne">&rarr;</button></div>
+    </div>
+    <div class="tor" id="tor-uslugi">
+      <article class="us"><div class="fot"><img src="img/laser.webp" alt="Cięcie laserem" width="1000" height="666" loading="lazy"></div><h3>Cięcie laserem</h3><p>Precyzyjne wycinanie detali z blachy.</p></article>
+      <article class="us"><div class="fot"><img src="img/giecie.webp" alt="Gięcie blachy na prasie krawędziowej" width="640" height="426" loading="lazy"></div><h3>Gięcie blach</h3><p>Obróbka i gięcie na prasach krawędziowych.</p></article>
+      <article class="us"><div class="fot"><img src="img/spawanie.webp" alt="Spawanie" width="1200" height="799" loading="lazy"></div><h3>Spawanie TIG/MIG</h3><p>Spawanie elementów stalowych metodą TIG i MIG.</p></article>
+      <article class="us"><div class="fot"><img src="img/malowanie.webp" alt="Wzornik kolorów lakieru" width="640" height="426" loading="lazy"></div><h3>Malowanie proszkowe</h3><p>Trwała powłoka w wybranym kolorze RAL.</p></article>
+      <article class="us"><div class="fot"><img src="img/komponenty.webp" alt="Metalowe komponenty" width="640" height="426" loading="lazy"></div><h3>Komponenty metalowe</h3><p>Produkcja według projektów i wymagań kooperantów.</p></article>
+      <article class="us"><div class="fot"><img src="img/cad.webp" alt="Rysunek techniczny" width="1000" height="666" loading="lazy"></div><h3>Dokumentacja CAD 2D</h3><p>Przygotowanie plików DWG/DXF pod wycinanie laserowe.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="t-uga">
+  <div class="wrap tuga">
+    <div>
+      <h2>Uchwyty grzejnika aluminiowego T-UGA</h2>
+      <p class="opis">Stalowe uchwyty malowane proszkowo na biało (RAL 9003). Głęboko tłoczona szyna główna daje wysoką sztywność, a cztery punkty podparcia trzymają grzejnik stabilnie.</p>
+      <div class="wersje" aria-label="Dostępne wersje">
+        <span>350<small>T-UGA</small></span><span>500<small>T-UGA</small></span><span>600<small>T-UGA</small></span><span>800<small>T-UGA</small></span>
+      </div>
+      <div class="kol">
+        <div><h3>Cechy</h3><ul class="lista">
+          <li>Stal malowana proszkowo, RAL 9003</li>
+          <li>Głębokie tłoczenie szyny głównej</li>
+          <li>Otwory w kształcie fasolki ułatwiają montaż</li>
+          <li>Cztery punkty podparcia</li>
+        </ul></div>
+        <div><h3>Zestaw zawiera</h3><ul class="lista">
+          <li>2 uchwyty do grzejnika aluminiowego</li>
+          <li>4 tworzywowo-metalowe łączniki rozporowe FAST-FIX</li>
+          <li>4 zaślepki na śruby</li>
+        </ul></div>
+      </div>
+      <a class="btn btn-ink" href="http://torsen.pl/files/T-UGA.pdf" rel="noopener">Katalog uchwytów T-UGA (PDF)</a>
+    </div>
+    <div class="tuga-foto">
+      <span class="n-tr"></span><span class="n-bl"></span>
+      <img src="img/t-uga.webp" alt="Para uchwytów grzejnika T-UGA" width="214" height="673" loading="lazy">
+      <img src="img/t-uga-wymiar.webp" alt="Rysunek wymiarowy uchwytu T-UGA 500" width="311" height="473" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="szary" id="firma">
+  <div class="wrap firma">
+    <div>
+      <h2>Rodzinne rzemiosło, branża metalowa od pokoleń</h2>
+      <p class="opis">TORSEN wyrasta z tradycji rodzinnych, których korzenie sięgają poprzedniego wieku. Nasi przodkowie wykonywali różne zawody, ale zawsze kojarzono ich z rzemiosłem, mechaniką, metalem i dbałością o szczegóły.</p>
+      <p class="opis">Dziś łączymy to doświadczenie z chęcią rozwoju. Nie oszczędzamy na materiałach, a każdą obudowę projektujemy i produkujemy w Polsce.</p>
+    </div>
+    <div>
+      <div class="archiwum">
+        <figure class="a1"><img src="img/archiwum-2.webp" alt="Archiwalne zdjęcie: rodzina przy warsztacie" width="748" height="385" loading="lazy"></figure>
+        <figure class="a2"><img src="img/archiwum-1.webp" alt="Archiwalne zdjęcie zabudowań warsztatu" width="748" height="521" loading="lazy"></figure>
+        <figure class="a3"><img src="img/archiwum-4.webp" alt="Archiwalne zdjęcie maszyny w warsztacie" width="346" height="549" loading="lazy" style="object-position:50% 40%"></figure>
+      </div>
+      <p class="podpis-arch">Zdjęcia z rodzinnego archiwum.</p>
+    </div>
+  </div>
+</section>
+
+<section id="siec">
+  <div class="wrap siec">
+    <div>
+      <h2>Gdzie kupić nasze produkty</h2>
+      <p class="opis">Obudowy i uchwyty kupią Państwo bezpośrednio u nas albo u dystrybutorów. Stale poszerzamy sieć sprzedaży i szukamy nowych partnerów.</p>
+      <a class="btn btn-or" href="#kontakt">Zostań dystrybutorem</a>
+    </div>
+    <div class="dyst">
+      <article><span class="zn"><span class="n-tr"></span><span class="n-bl"></span></span><div><h3>Progres Automatyka</h3><p>ul. Kombatantów 3, 44-268 Jastrzębie-Zdrój</p><p><a href="https://sklep.progres-automatyka.pl" rel="noopener" target="_blank">sklep.progres-automatyka.pl</a></p></div></article>
+      <article><span class="zn"><span class="n-tr"></span><span class="n-bl"></span></span><div><h3>INSTALATOR</h3><p>ul. Krakowska 147A, 38-400 Krosno</p></div></article>
+      <article><span class="zn"><span class="n-tr"></span><span class="n-bl"></span></span><div><h3>TORSEN, sprzedaż bezpośrednia</h3><p>Moderówka 113a, 38-460 Jedlicze</p><p><a href="mailto:info@torsen.pl">info@torsen.pl</a></p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="szary" id="kontakt">
+  <div class="wrap kontakt">
+    <div>
+      <h2>Zapytanie o obudowę lub usługę</h2>
+      <p class="opis">Napiszcie, jakiej obudowy potrzebujecie, ile sztuk i czy ma mieć dodatkowe otwory lub inny kolor. Do usług obróbki wystarczy opis albo plik DWG/DXF.</p>
+      <form id="formularz" novalidate>
+        <div class="pola">
+          <label>Imię i nazwisko<input name="imie" autocomplete="name"></label>
+          <label>Firma<input name="firma" autocomplete="organization"></label>
+          <label>E-mail<input name="email" type="email" autocomplete="email"></label>
+          <label>Telefon<input name="tel" type="tel" autocomplete="tel"></label>
+          <label class="pelna">Wiadomość<textarea name="wiadomosc"></textarea></label>
+        </div>
+        <label class="zgoda"><input type="checkbox" name="zgoda"> <span>Zgadzam się na przetwarzanie moich danych przez TORSEN MM BOCHENEK SPÓŁKA JAWNA w celu odpowiedzi na wiadomość. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</span></label>
+        <button class="btn btn-or" type="submit">Wyślij zapytanie</button>
+        <p class="info-form" id="info-form">To podgląd strony, formularz nie wysyła jeszcze wiadomości.</p>
+      </form>
+    </div>
+    <div class="dane">
+      <h3>TORSEN MM BOCHENEK SPÓŁKA JAWNA</h3>
+      <p>Moderówka 113a, 38-460 Jedlicze</p>
+      <p><a class="duzy" href="tel:+48665144480">+48 665 144 480</a></p>
+      <p><a class="duzy" href="tel:+48134312413">+48 13 431 24 13</a></p>
+      <p><a class="duzy" href="mailto:info@torsen.pl">info@torsen.pl</a></p>
+      <p class="rej">NIP 684-265-34-44 &middot; REGON 383359833 &middot; KRS 0000786286</p>
+      <div class="mapa">
+        <iframe title="Mapa dojazdu: Moderówka 113a, Jedlicze" src="https://www.google.com/maps?q=Moder%C3%B3wka+113a,+38-460+Jedlicze&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="st">
+      <div>
+        <a class="logo" href="#start" aria-label="TORSEN"><svg viewBox="0 0 175.35 27.72" role="img" aria-hidden="true"><g transform="matrix(1.3333 0 0 -1.3333 0 27.72)"><g fill="currentColor"><path d="m36.007 14.373v-12.127h-5.234v12.127h-5.3535v4.1692h15.917v-4.1692h-5.3293"/><path d="m47.59 11.152v-1.516c0-2.2262 1.1368-3.7652 3.4344-3.7652 2.2981 0 3.4598 1.5391 3.4598 3.7652v1.516c0 2.2262-1.1617 3.7661-3.4598 3.7661-2.2976 0-3.4344-1.5399-3.4344-3.7661zm12.246-0.7578c0-5.5672-3.2457-8.4304-8.8121-8.4304-5.5656 0-8.7871 2.8633-8.7871 8.4304 0 5.566 3.2215 8.4321 8.7871 8.4321 5.5664 0 8.8121-2.8661 8.8121-8.4321"/><path d="m71.319 14.824h-3.4304v-3.0086h3.4304c0.8079 0 1.4707 0.6395 1.4707 1.5164 0 0.8766-0.6628 1.4922-1.4707 1.4922zm3.6504-5.7562 3.6235-6.8219h-5.8742l-2.8907 5.9465h-1.9394v-5.9465h-5.2344v16.297h9.9695c3.6242 0 5.4946-2.3449 5.4946-4.9977 0-1.8949-1.0422-3.6953-3.1489-4.4769"/><path d="m95.126 13.805v-0.284h-4.9028v0.0949c0 0.8532-0.5933 1.6578-2.1089 1.6578-1.4446 0-2.1555-0.4964-2.1555-1.0648 0-2.4398 9.4973-0.5215 9.6172-6.5609 0-4.052-3.0782-5.6836-7.177-5.6836-4.5699 0-8.0535 1.1582-8.0535 5.8016h4.9512c0-1.7527 1.0183-2.0594 2.6277-2.0594 0.9484 0 2.2988 0.07031 2.2988 1.0879 0 2.3445-9.6171 0.47344-9.6171 6.8215 0 3.7907 3.4582 5.211 7.3183 5.211 3.9328 0 7.1313-1.5399 7.2016-5.0219"/><path d="m98.181 18.543h14.092v-3.9082h-8.858v-2.2504h7.58v-3.743h-7.58v-2.4867h9.023v-3.9082h-14.257v16.297"/><path d="m126.94 2.2461-6.847 7.9117v-7.9117h-4.806v16.297h4.57l6.844-8.0289v8.0289h4.81v-16.297h-4.571"/></g><path d="m20.354 20.79h-19.467l5.3707-5.3711h8.7266v-8.7258l5.3699-5.3711v19.468" fill="#F68712"/><path d="m0 0h19.466l-5.3703 5.3703h-8.725v8.725l-5.3711 5.3711v-19.466" fill="#F68712"/></g></svg></a>
+        <p>TORSEN MM BOCHENEK SPÓŁKA JAWNA</p>
+        <p>Moderówka 113a, 38-460 Jedlicze</p>
+        <p>NIP 684-265-34-44, KRS 0000786286</p>
+      </div>
+      <div><h4>Produkty</h4><ul><li><a href="#obudowy">Obudowy sterownicze OS</a></li><li><a href="#t-uga">Uchwyty T-UGA</a></li><li><a href="http://torsen.pl/files/OS.pdf" rel="noopener">Katalog OS (PDF)</a></li></ul></div>
+      <div><h4>Firma</h4><ul><li><a href="#uslugi">Usługi</a></li><li><a href="#firma">O firmie</a></li><li><a href="#siec">Sieć sprzedaży</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+48665144480">+48 665 144 480</a></li><li><a href="tel:+48134312413">+48 13 431 24 13</a></li><li><a href="mailto:info@torsen.pl">info@torsen.pl</a></li></ul></div>
+    </div>
+    <div class="st-dol">
+      <span>&copy; <span id="rok">2026</span> TORSEN MM BOCHENEK SPÓŁKA JAWNA &middot; <a href="polityka-prywatnosci.html">Polityka prywatności</a> &middot; <button type="button" id="ustaw-cookies">Ustawienia cookies</button></span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=torsen.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" role="dialog" aria-label="Pliki cookies">
+  <p>Używamy tylko niezbędnych cookies, mapa Google może zapisać własne. <a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
+  <div class="cta"><button class="btn btn-or" data-zgoda="wszystkie">Akceptuję</button><button class="btn btn-jasny" data-zgoda="niezbedne">Tylko niezbędne</button></div>
+</div>
+
+<script>
+(function(){
+  var d=document;
+  d.getElementById('rok').textContent=new Date().getFullYear();
+  // menu mobilne
+  var b=d.querySelector('.burger'),m=d.getElementById('mmenu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('otw');b.setAttribute('aria-expanded',o)});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('otw');b.setAttribute('aria-expanded','false')})});
+  // aktywna pozycja menu
+  var linki=d.querySelectorAll('.nav a'),mapa={};
+  linki.forEach(function(a){mapa[a.getAttribute('href').slice(1)]=a});
+  var sek=['obudowy','uslugi','t-uga','firma','siec','kontakt'].map(function(id){return d.getElementById(id)});
+  function akt(){var y=window.scrollY+window.innerHeight*.35,on=null;sek.forEach(function(s){if(s.offsetTop<=y)on=s.id});
+    if(d.getElementById('budowa').offsetTop<=y&&d.getElementById('uslugi').offsetTop>y)on='obudowy';
+    linki.forEach(function(a){a.classList.remove('on')});if(on&&mapa[on])mapa[on].classList.add('on')}
+  window.addEventListener('scroll',akt,{passive:true});akt();
+  // karty: przeciąganie myszą i strzałki
+  d.querySelectorAll('.tor').forEach(function(t){
+    var x0,s0,ruch=false,wcisk=false;
+    t.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;wcisk=true;ruch=false;x0=e.clientX;s0=t.scrollLeft});
+    window.addEventListener('pointermove',function(e){if(!wcisk)return;var dx=e.clientX-x0;if(Math.abs(dx)>4){ruch=true;t.classList.add('drag')}t.scrollLeft=s0-dx});
+    window.addEventListener('pointerup',function(){if(!wcisk)return;wcisk=false;t.classList.remove('drag');
+      var k=t.children[0].getBoundingClientRect().width+parseFloat(getComputedStyle(t).columnGap||24);t.scrollTo({left:Math.round(t.scrollLeft/k)*k,behavior:'smooth'})});
+    t.addEventListener('click',function(e){if(ruch){e.preventDefault();e.stopPropagation();ruch=false}},true);
+  });
+  d.querySelectorAll('.strz').forEach(function(s){var t=d.getElementById(s.dataset.tor),bt=s.querySelectorAll('button');
+    function krok(k){var w=t.children[0].getBoundingClientRect().width+24;t.scrollBy({left:k*w,behavior:'smooth'})}
+    bt[0].addEventListener('click',function(){krok(-1)});bt[1].addEventListener('click',function(){krok(1)})});
+  // formularz pokazowy
+  d.getElementById('formularz').addEventListener('submit',function(e){e.preventDefault();d.getElementById('info-form').style.display='block'});
+  // cookies
+  var c=d.getElementById('cookies'),zap=null;
+  try{zap=localStorage.getItem('torsen-cookies')}catch(e){}
+  if(!zap)c.classList.add('pokaz');
+  c.querySelectorAll('[data-zgoda]').forEach(function(x){x.addEventListener('click',function(){try{localStorage.setItem('torsen-cookies',x.dataset.zgoda)}catch(e){}c.classList.remove('pokaz')})});
+  d.getElementById('ustaw-cookies').addEventListener('click',function(){c.classList.add('pokaz')});
+})();
+</script>
+</body>
+</html>
